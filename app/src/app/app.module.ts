@@ -1,8 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-// import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbSidebarService, NbCardModule, NbListModule, NbButtonModule } from '@nebular/theme';
-// import { RouterModule } from '@angular/router';
+import {
+  NbThemeModule, NbLayoutModule, NbSidebarModule, NbSidebarService,
+  NbCardModule, NbListModule, NbButtonModule, NbMenuModule, NbIconModule, NbAccordionModule, NbInputModule
+} from '@nebular/theme';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+
+import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -12,19 +19,26 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    // NbThemeModule.forRoot({
-    //   name: 'dark'
-    // }),
-    // RouterModule.forRoot([]),
-    // NbLayoutModule,
-    // NbListModule,
-    // NbButtonModule,
-    // NbCardModule,
-    // NbSidebarModule,
+    NbThemeModule.forRoot({
+      name: 'dark'
+    }),
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot([]),
+    NbMenuModule.forRoot(),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbInputModule,
+    NbIconModule,
+    NbListModule,
+    NbButtonModule,
+    NbAccordionModule,
+    NbCardModule,
+    NbSidebarModule,
     BrowserModule
   ],
   providers: [
-    //NbSidebarService
+    NbSidebarService
   ],
   bootstrap: [AppComponent]
 })

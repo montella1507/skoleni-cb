@@ -1,0 +1,51 @@
+Evolution plan 
+
+
+- vše do jednoho modulu 
+- při routingu rovnou pak layout
+
+
+
+1) edit, list a detail na stejne obrazovce
+2) rozdeleni editu a detailu do komponent s parent komponentou a inputy + outputy  + tlacitko save
+3) CSS v component stylu - ukazat scoping
+4) ngIf, ngFor - iterace pole v parent komponte pomoci foreache a tlacitko na editaci, prepinani pomoci MODEU 
+5) Predvezt change tracking problemy 
+6) Odevzdani dat do servisy
+7) Servisy 
+8) Napojeni na formular, zaklad 
+9) Zakladni validace a csska
+
+10) Routing, rozdeleni listu a detailu do routy - nacteni dat primo uvnitr komponenty - navigace 
+
+
+11) Vysvetleni layoutu a predelani na Portal a Outportal 
+12) Pridat k hrdinum i zaklad abilit
+13) Komunikace se serverem - data normalne lokalne a refresh() metody  ---> LOW QUALITY CODE 
+14) Vylepsit volani pres servisu - inejctnout si http 
+
+15) Detail 1000x a v intervalu menit hodnotu 
+16) Zmena lokalnich dat na observable z http servisy -> ukazani ze se to zacykli -> COMMON PITFALL
+17) Vytvoreni "PAGE" componenty - page-layoutu pomocí NG-contentu
+18) Vytvoreni loading componenty 
+
+19) Custom formular 
+20) Guard na prihlaseneho uzivatele + handleni chyb - spravne zpracovany formular - ukladat do localStorage
+21) Resolve na detail - cekani na navigaci - co kombinace? :-) 
+22) Na detail pridat sipky doleva a doprava - UI nereaguje proc?
+23) Na seznam hrdinnů přidat realtime filtrování listu - rxjs, deboucne, napojeni na server atd
+24) Data z komponenty presunout do servisy jako observable. 
+25) Obecný REDUX na load, filtr, formulare.. 
+26) Optimalizace ReDUXU , flattening operátory
+27) LoadAndWait operátor
+28) Ukázka optimalizace - setTimeout na refreshování listu - provolání changeDetekce rucne pokud se neco zmeni 
+29) Code splitting - detaily do samostatneho widget modulu
+30) Preload route 
+31) NGRX /Data 
+32) Query data by pipe
+33) Dynamic compoennt
+34) Data connectors
+
+ 
+
+
