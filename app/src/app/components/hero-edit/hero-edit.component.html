@@ -1,0 +1,34 @@
+<nb-card accent="info">
+  <nb-card-header> Edit hero</nb-card-header>
+  <nb-card-body fxLayout="flex">
+    <div fxFlex="70">
+      <div>
+        <span>Name </span>
+        <input nbInput />
+      </div>
+      <div>
+        <span>Description </span>
+        <input nbInput />
+      </div>
+      <div>
+        <span>Power ranking </span>
+        <input nbInput />
+      </div>
+      <div>
+        <span>Image URL </span>
+        <input
+          nbInput
+          #imageURL
+          value="https://upload.wikimedia.org/wikipedia/en/8/87/Batman_DC_Comics.png"
+        />
+      </div>
+    </div>
+    <div fxFlex="30">
+      <img [src]="imageURL.value" />
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton status="primary">Save</button>
+    <button nbButton status="warning">Cancel</button>
+  </nb-card-footer>
+</nb-card>

@@ -1,0 +1,83 @@
+<nb-card accent="info">
+  <nb-card-header>Heroes</nb-card-header>
+  <nb-card-body>
+    <span>Filter by name </span>
+    <input nbInput />
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+      fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in
+      pharetra metus odio a lectus. Duis bibendum, lectus ut viverra rhoncus,
+      dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Duis aute
+      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+      fugiat nulla pariatur. Sed convallis magna eu sem. Lorem ipsum dolor sit
+      amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a
+      vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc.
+      Phasellus et lorem id felis nonummy placerat. Morbi imperdiet, mauris ac
+      auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in
+      lacus. Fusce suscipit libero eget elit.
+    </p>
+    <nb-accordion multi>
+      <nb-accordion-item *ngFor="let hero of heroes">
+        <nb-accordion-item-header style="padding-right: 50px;">
+          {{ hero.name }}
+          <nb-icon
+            style="margin-left:auto"
+            icon="edit-2-outline"
+            status="basic"
+            [options]="{ animation: { type: 'pulse' } }"
+            [routerLink]="['/heroes/edit', hero.id]"
+            (click)="$event.stopPropagation()"
+          ></nb-icon>
+        </nb-accordion-item-header>
+        <nb-accordion-item-body fxLayout="flex">
+          <nb-layout-column fxFlex="20">
+            <img [src]="hero.imageUrl" />
+          </nb-layout-column>
+          <nb-layout-column fxFlex="80"
+            >{{ hero.description }}
+            <div fxLayout="flex">
+              <div fxFlex="50">
+                <h3>
+                  Biography
+                </h3>
+                <dl>
+                  <dt>Name</dt>
+                  <dd>{{ hero.name }}</dd>
+                </dl>
+                <dl>
+                  <dt>Power rating</dt>
+                  <dd>{{ hero.powerRating }}</dd>
+                </dl>
+                <dl>
+                  <dt>Name</dt>
+                  <dd>John</dd>
+                </dl>
+              </div>
+              <div fxFlex="50">
+                <h3>
+                  Abilities
+                </h3>
+                <ul>
+                  <li *ngFor="let ability of hero.abilities">
+                    {{ ability }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nb-layout-column>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+    </nb-accordion>
+  </nb-card-body>
+  <nb-card-footer>
+    <button
+      nbButton
+      status="primary"
+      style="margin: 10px"
+      [routerLink]="['/heroes/new']"
+    >
+      Add
+    </button>
+    <button nbButton status="basic" style="margin: 10px">Reload</button>
+  </nb-card-footer>
+</nb-card>
